@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "0aaab515-8cd5-47b8-8e1c-d408899d5bc8",
+		"name": "demo1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getrequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb693ddf-aa61-43d5-92c5-93c02d8e155a",
+						"exec": [
+							"tests[\"validate stus code\"]=responseCode.code==200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "4be21a77-e5ab-449e-b3ee-0b8f95cba3ac",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postrequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2d51c00b-b161-4f56-b889-98de2ccfbb8c",
+						"exec": [
+							"tests[\"validate stus code\"]=responseCode.code==201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "a24fc219-7cbc-48e7-a440-eb605460a9ee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "putrequest",
+			"_postman_id": "68be6744-8d91-41fc-a44d-30865c2655e7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "deleterequest",
+			"_postman_id": "d843114b-66ad-4e69-bc2e-a9e757fb1464",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "https://maps.googleapis.com/maps/api/place/nearbysearch/xml?location=-33.8670522,151.1957362&radius=1500&type=supermarket&key=AIzaSyBjGCE3VpLU4lgTqSTDmHmJ2HoELb4Jy1s",
+			"_postman_id": "51d3d9d9-e3c9-421a-9ff2-018dcf182a10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/place/nearbysearch/xml?location=-33.8670522,151.1957362&radius=1500&type=supermarket&key=AIzaSyBjGCE3VpLU4lgTqSTDmHmJ2HoELb4Jy1s",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"nearbysearch",
+						"xml"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "-33.8670522,151.1957362"
+						},
+						{
+							"key": "radius",
+							"value": "1500"
+						},
+						{
+							"key": "type",
+							"value": "supermarket"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyBjGCE3VpLU4lgTqSTDmHmJ2HoELb4Jy1s"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
